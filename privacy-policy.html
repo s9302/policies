@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Personal Assistant</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f0e0d;
+    --paper: #f5f2ed;
+    --muted: #6b6560;
+    --accent: #c8401a;
+    --rule: #d9d4cc;
+    --mono: 'DM Mono', monospace;
+    --serif: 'DM Serif Display', serif;
+  }
+
+  html { background: var(--paper); color: var(--ink); }
+
+  body {
+    font-family: var(--mono);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding: 2.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+
+  .site-name {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+
+  .doc-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 3rem 6rem;
+  }
+
+  .page-title {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+    color: var(--ink);
+  }
+
+  .page-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .effective-date {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .effective-date span {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  h2::before {
+    content: attr(data-n);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    border: 1px solid var(--accent);
+    padding: 1px 6px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  p {
+    color: #3a3630;
+    margin-bottom: 0.9rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  ul li {
+    color: #3a3630;
+    padding: 0.3rem 0 0.3rem 1.4rem;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .highlight-box {
+    border-left: 2px solid var(--accent);
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    background: rgba(200, 64, 26, 0.04);
+  }
+
+  .highlight-box p {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .contact-block {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2rem 2.5rem;
+    margin-top: 3rem;
+    border-radius: 4px;
+  }
+
+  .contact-block h3 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    color: var(--paper);
+  }
+
+  .contact-block p {
+    color: #b8b0a5;
+    font-size: 13px;
+    margin-bottom: 0.4rem;
+  }
+
+  .contact-block a {
+    color: #e8a08a;
+    text-decoration: none;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  footer a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    header, main, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    header { flex-direction: column; align-items: flex-start; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="site-name">Spencer's Assistant</div>
+  <div class="doc-label">Legal Document</div>
+</header>
+
+<main>
+  <h1 class="page-title">Privacy<br><em>Policy</em></h1>
+  <p class="effective-date">Effective date: <span>January 1, 2025</span> &nbsp;·&nbsp; Last updated: <span>January 1, 2025</span></p>
+
+  <section>
+    <h2 data-n="01">Overview</h2>
+    <p>This privacy policy describes how Spencer's Personal AI Assistant ("the Service," "we," "us") collects, uses, and protects information when you interact with this phone number via voice call or SMS text message.</p>
+    <p>This is a personal AI assistant operated by an individual for the purpose of managing incoming communications. It is not a commercial service or marketing platform.</p>
+    <div class="highlight-box">
+      <p>We are committed to protecting your privacy. Your information is used solely to facilitate communication with this assistant and is never sold, rented, or shared with third parties for marketing purposes.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-n="02">Information We Collect</h2>
+    <p>When you interact with this Service, we may collect the following:</p>
+    <ul>
+      <li>Your phone number, as provided automatically by your carrier when you call or text</li>
+      <li>The content of SMS messages you send to this number</li>
+      <li>Voice call audio and transcripts for the purpose of generating a response</li>
+      <li>Timestamps of when messages or calls were received</li>
+    </ul>
+    <p>We do not collect your name, address, email, financial information, or any other personal data beyond what is listed above.</p>
+  </section>
+
+  <section>
+    <h2 data-n="03">How We Use Your Information</h2>
+    <p>Information collected through the Service is used exclusively for the following purposes:</p>
+    <ul>
+      <li>To process and respond to your inbound calls and text messages</li>
+      <li>To maintain conversational context within an active session</li>
+      <li>To relay messages to the owner of this number when appropriate</li>
+      <li>To improve the quality and accuracy of responses</li>
+    </ul>
+    <p>We do not use your information for advertising, profiling, lead generation, or any commercial purpose.</p>
+  </section>
+
+  <section>
+    <h2 data-n="04">Data Sharing & Third Parties</h2>
+    <p>Your information is not sold, traded, or transferred to outside parties. However, in order to operate the Service, your messages may be processed by the following categories of service providers:</p>
+    <ul>
+      <li><strong>Telephony providers</strong> (e.g., Twilio) — to route and deliver calls and SMS messages</li>
+      <li><strong>AI processing providers</strong> (e.g., Anthropic) — to generate intelligent responses</li>
+      <li><strong>Speech-to-text providers</strong> — to transcribe voice calls into text for processing</li>
+    </ul>
+    <p>These providers are bound by their own privacy policies and are used solely to deliver the functionality of this Service. They do not receive permission to use your data for their own purposes beyond service delivery.</p>
+  </section>
+
+  <section>
+    <h2 data-n="05">Data Retention</h2>
+    <p>Message logs and call transcripts may be retained for up to 90 days for the purpose of reviewing and improving the Service. After this period, data is deleted. You may request earlier deletion at any time by contacting us.</p>
+  </section>
+
+  <section>
+    <h2 data-n="06">Your Rights & Opt-Out</h2>
+    <p>You have the following rights regarding your data and participation in this Service:</p>
+    <ul>
+      <li>Reply <strong>STOP</strong> at any time to stop receiving SMS messages from this number</li>
+      <li>Reply <strong>HELP</strong> to receive support information</li>
+      <li>Request deletion of any data associated with your phone number by contacting us directly</li>
+      <li>Opt out of voice assistant interactions by simply not calling the number</li>
+    </ul>
+    <p>We will honor all opt-out requests promptly and will not contact you again after receiving a STOP request unless you re-initiate contact.</p>
+  </section>
+
+  <section>
+    <h2 data-n="07">Security</h2>
+    <p>We take reasonable technical measures to protect your information from unauthorized access, alteration, or disclosure. Communications are transmitted over encrypted channels wherever supported by our service providers.</p>
+  </section>
+
+  <section>
+    <h2 data-n="08">Children's Privacy</h2>
+    <p>This Service is not directed at individuals under the age of 13. We do not knowingly collect personal information from children. If you believe a child has interacted with this Service, please contact us so we can delete the relevant data.</p>
+  </section>
+
+  <section>
+    <h2 data-n="09">Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. Changes will be reflected in the "Last updated" date at the top of this page. Continued use of the Service after changes constitutes acceptance of the revised policy.</p>
+  </section>
+
+  <div class="contact-block">
+    <h3>Contact</h3>
+    <p>If you have questions about this privacy policy or wish to request data deletion:</p>
+    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+    <p>SMS: Text HELP to the number you contacted</p>
+  </div>
+
+</main>
+
+<footer>
+  <span>© 2025 Spencer's Personal AI Assistant</span>
+  <a href="terms.html">Terms &amp; Conditions →</a>
+</footer>
+
+</body>
+</html>

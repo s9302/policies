@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions — Personal Assistant</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f0e0d;
+    --paper: #f5f2ed;
+    --muted: #6b6560;
+    --accent: #c8401a;
+    --rule: #d9d4cc;
+    --mono: 'DM Mono', monospace;
+    --serif: 'DM Serif Display', serif;
+  }
+
+  html { background: var(--paper); color: var(--ink); }
+
+  body {
+    font-family: var(--mono);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding: 2.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+
+  .site-name {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+
+  .doc-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 3rem 6rem;
+  }
+
+  .page-title {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+    color: var(--ink);
+  }
+
+  .page-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .effective-date {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .effective-date span {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .summary-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+  }
+
+  .summary-item {
+    background: var(--paper);
+    padding: 1rem 1.25rem;
+  }
+
+  .summary-item .label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .summary-item .value {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  h2::before {
+    content: attr(data-n);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    border: 1px solid var(--accent);
+    padding: 1px 6px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  p {
+    color: #3a3630;
+    margin-bottom: 0.9rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  ul li {
+    color: #3a3630;
+    padding: 0.3rem 0 0.3rem 1.4rem;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .keyword-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .kw {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0.3rem 0.75rem;
+    border-radius: 3px;
+  }
+
+  .kw.stop { background: #fdecea; color: #b71c1c; border: 1px solid #f5c6c4; }
+  .kw.help { background: #e8f4fd; color: #0d47a1; border: 1px solid #b3d9f7; }
+  .kw.start { background: #e8f5e9; color: #1b5e20; border: 1px solid #b2dfdb; }
+
+  .highlight-box {
+    border-left: 2px solid var(--accent);
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    background: rgba(200, 64, 26, 0.04);
+  }
+
+  .highlight-box p {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .contact-block {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2rem 2.5rem;
+    margin-top: 3rem;
+    border-radius: 4px;
+  }
+
+  .contact-block h3 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    color: var(--paper);
+  }
+
+  .contact-block p {
+    color: #b8b0a5;
+    font-size: 13px;
+    margin-bottom: 0.4rem;
+  }
+
+  .contact-block a {
+    color: #e8a08a;
+    text-decoration: none;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  footer a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    header, main, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    header { flex-direction: column; align-items: flex-start; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="site-name">Spencer's Assistant</div>
+  <div class="doc-label">Legal Document</div>
+</header>
+
+<main>
+  <h1 class="page-title">Terms &amp;<br><em>Conditions</em></h1>
+  <p class="effective-date">Effective date: <span>January 1, 2025</span> &nbsp;·&nbsp; Last updated: <span>January 1, 2025</span></p>
+
+  <div class="summary-bar">
+    <div class="summary-item">
+      <div class="label">Program</div>
+      <div class="value">Spencer's Personal AI Assistant</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">Message frequency</div>
+      <div class="value">Varies per conversation</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">Rates</div>
+      <div class="value">Msg &amp; data rates may apply</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">Support</div>
+      <div class="value">Reply HELP</div>
+    </div>
+  </div>
+
+  <section>
+    <h2 data-n="01">About This Service</h2>
+    <p>Spencer's Personal AI Assistant ("the Service") is a personal, non-commercial AI assistant accessible via phone call and SMS text message. By contacting this number, you agree to these Terms and Conditions.</p>
+    <p>This Service is designed to handle inbound communications on behalf of an individual. It is not a subscription service, marketing campaign, or commercial product.</p>
+  </section>
+
+  <section>
+    <h2 data-n="02">Eligibility & Consent</h2>
+    <p>By sending a message to or calling this number, you confirm that:</p>
+    <ul>
+      <li>You are 13 years of age or older</li>
+      <li>You have been given this number directly or have a legitimate reason to contact it</li>
+      <li>You consent to receive automated or AI-generated responses via SMS or voice</li>
+      <li>You understand that message and data rates from your carrier may apply</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-n="03">Message Frequency</h2>
+    <p>Message frequency varies based on the nature of your interaction with the Service. You will typically receive one response per message you send. In some cases, follow-up messages may be sent to relay information or complete a request.</p>
+    <p>This is not a recurring subscription — you will not receive unprompted messages except in direct response to your own communications.</p>
+  </section>
+
+  <section>
+    <h2 data-n="04">Opt-Out & Help Instructions</h2>
+    <p>You can manage your participation in this Service using the following keywords at any time:</p>
+    <div class="keyword-row">
+      <span class="kw stop">STOP</span>
+      <span class="kw help">HELP</span>
+      <span class="kw start">START</span>
+    </div>
+    <ul>
+      <li>Reply <strong>STOP</strong> to immediately opt out of all future messages from this number. After opting out, you will receive one final confirmation message.</li>
+      <li>Reply <strong>HELP</strong> to receive support information and contact details.</li>
+      <li>Reply <strong>START</strong> to re-enable messages if you have previously opted out.</li>
+    </ul>
+    <div class="highlight-box">
+      <p>After sending STOP, you will not receive any further messages from this number unless you re-initiate contact. Opt-out requests are honored immediately.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-n="05">Rates & Charges</h2>
+    <p>Standard message and data rates may apply depending on your mobile carrier and plan. This Service does not charge any fees for its use. Any charges incurred are between you and your mobile carrier.</p>
+    <p>For questions about rates, contact your mobile service provider.</p>
+  </section>
+
+  <section>
+    <h2 data-n="06">Nature of Responses</h2>
+    <p>Responses from this number are generated by an AI assistant and may not always be accurate, complete, or timely. You should not rely on this Service for:</p>
+    <ul>
+      <li>Emergency situations — always call 911 for emergencies</li>
+      <li>Medical, legal, or financial advice</li>
+      <li>Time-sensitive matters requiring guaranteed response times</li>
+    </ul>
+    <p>The AI assistant acts as a proxy for the number's owner. Responses reflect a best-effort attempt to be helpful and are not legally binding commitments.</p>
+  </section>
+
+  <section>
+    <h2 data-n="07">Prohibited Use</h2>
+    <p>You agree not to use this Service to:</p>
+    <ul>
+      <li>Send spam, unsolicited bulk messages, or abusive content</li>
+      <li>Attempt to deceive, manipulate, or probe the AI system</li>
+      <li>Transmit illegal content or engage in unlawful activity</li>
+      <li>Harass, threaten, or harm any individual</li>
+    </ul>
+    <p>Violations may result in your number being blocked from the Service.</p>
+  </section>
+
+  <section>
+    <h2 data-n="08">Limitation of Liability</h2>
+    <p>This Service is provided "as is" without warranties of any kind. The operator of this Service is not liable for any damages arising from your use of or reliance on this Service, including but not limited to incorrect, delayed, or missing responses.</p>
+  </section>
+
+  <section>
+    <h2 data-n="09">Privacy</h2>
+    <p>Your use of this Service is also governed by our <a href="privacy.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">Privacy Policy</a>, which describes how your data is collected, used, and protected. We do not sell or share your information with third parties for marketing purposes.</p>
+  </section>
+
+  <section>
+    <h2 data-n="10">Changes to These Terms</h2>
+    <p>We reserve the right to update these Terms at any time. The effective date at the top of this page will reflect the most recent revision. Continued use of the Service following any changes constitutes your acceptance of the updated Terms.</p>
+  </section>
+
+  <div class="contact-block">
+    <h3>Support & Contact</h3>
+    <p>For support, reply <strong style="color: #e8e0d8;">HELP</strong> to the number you contacted.</p>
+    <p>For other inquiries: <a href="mailto:your@email.com">your@email.com</a></p>
+    <p style="margin-top: 0.75rem; font-size: 12px; color: #7a7268;">Msg &amp; data rates may apply. Message frequency varies. Reply STOP to cancel, HELP for help.</p>
+  </div>
+
+</main>
+
+<footer>
+  <span>© 2025 Spencer's Personal AI Assistant</span>
+  <a href="privacy.html">Privacy Policy →</a>
+</footer>
+
+</body>
+</html>
